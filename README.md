@@ -2,6 +2,9 @@
 
 A simple message board application built with Node.js, Express, and MongoDB featuring thumbs up/down voting functionality.
 
+![70E05840-8CC5-4103-AEA1-CD7DF51E078B](https://github.com/user-attachments/assets/d43c460b-e6d7-43e4-84ad-9e7ea79252d5)
+
+
 ## Features
 
 - Create and view messages
@@ -16,78 +19,11 @@ A simple message board application built with Node.js, Express, and MongoDB feat
 - **MongoDB** - NoSQL database
 - **Mongoose** - MongoDB object modeling
 
-## Prerequisites
+## Lessons Learned
 
-Before running this application, make sure you have the following installed:
-
-- [Node.js](https://nodejs.org/) (v14 or higher)
-- [MongoDB](https://www.mongodb.com/) (running locally or MongoDB Atlas account)
-
-## Installation
-
-1. Clone the repository:
-```bash
-git clone https://github.com/johnzapata0313/answer-SaveageDemo.git
-cd answer-SaveageDemo
-```
-
-2. Checkout the answer branch:
-```bash
-git checkout answer
-```
-
-3. Install dependencies:
-```bash
-npm install
-```
-
-4. Create a `.env` file in the root directory and add your MongoDB connection string:
-```
-MONGODB_URI=mongodb://localhost:27017/messageboard
-PORT=3000
-```
-
-## Usage
-
-1. Start the application:
-```bash
-npm start
-```
-
-2. Open your browser and navigate to:
-```
-http://localhost:3000
-```
-
-3. Start posting messages and voting!
-
-## API Endpoints
-
-- `GET /` - View all messages
-- `POST /messages` - Create a new message
-- `PUT /messages/:id/upvote` - Add thumbs up to a message
-- `PUT /messages/:id/downvote` - Add thumbs down to a message
-
-## Project Structure
-
-```
-answer-SaveageDemo/
-├── models/          # Database models
-├── routes/          # API routes
-├── public/          # Static files
-├── views/           # View templates
-├── server.js        # Main application file
-└── package.json     # Project dependencies
-```
+This project taught me critical backend development concepts including proper database connection timing (ensuring MongoDB connects before starting the Express server), environment-specific configuration using process.env variables for deployment flexibility, and working with MongoDB's ObjectId for database operations. I gained hands-on experience with full CRUD operations, learned to properly serve static files through Express, and successfully deployed the application using GitHub and Render's auto-deployment pipeline. Key technical skills included handling deprecated methods, understanding the difference between warnings and errors, and structuring code to prevent race conditions between database connections and route handlers.
 
 ## Contributing
 
 Feel free to fork this project and submit pull requests with improvements!
 
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## Author
-
-John Zapata - [GitHub](https://github.com/johnzapata0313)
